@@ -3,7 +3,7 @@
 # 🔎Objetivo🔍
 # Desarrollo de una página web de venta de productos de salud sexual
 
-# Requisitos
+# 🧩Requisitos🧩
 # ~Página llamativa
 # ~El usuario debe poder dejar una reseña
 # ~Para hacer una compra debe de introducir la dirección de envío
