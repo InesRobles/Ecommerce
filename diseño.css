@@ -166,13 +166,13 @@ html, body {
 .footer {
   position: relative;
   width: 100%;
-  height: 230px; 
+  height: 260px; 
   margin-top: 40px;
 }
 
 .footer-title {
   position: absolute;
-  top: 180px;     
+  top: 10px;     
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -186,7 +186,7 @@ html, body {
   top: 80px;    
   left: 5px;
   right: 11px;   
-  height: 200px;
+  height: 180px;
   background: #e6e6e6;
   border-radius: 2px;
 }
@@ -221,3 +221,13 @@ html, body {
 .footer-img-7 { 
   left: 1202px; 
 }                   
+
+.footer-mapa {
+  margin-left: 100px;
+  position: absolute;
+  top: 174px;
+  left: 8px;
+  width: 1272px;
+  height: 99px;
+  align-content: center;
+}
