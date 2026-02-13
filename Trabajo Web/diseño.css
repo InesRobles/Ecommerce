@@ -40,7 +40,7 @@ body {
 }
 
 /* Foto inicio */
-.hero img {
+.inicio img {
   width: 70%;
   display: block;
   margin: 40px auto;
@@ -103,14 +103,14 @@ body {
   margin-top: 30px;
 }
 
-.card {
+.cuadro {
   width: 250px;
   background: white;
   border-radius: 30px;
   padding-bottom: 15px;
 }
 
-.card img {
+.cuadro img {
   width: 100%;
   height: 250px;
   border-radius: 30px 30px 0 0;
@@ -118,11 +118,11 @@ body {
   object-fit:contain;
 }
 
-.card h3 {
+.cuadro h3 {
   margin: 10px 0;
 }
 
-.card p {
+.cuadro p {
   font-size: 14px;
   padding: 0 10px;
 }
@@ -152,28 +152,14 @@ body {
   border-radius: 40px;
 }
 
-.avatar {
+.perfil {
   width: 60px;
   border-radius: 50%;
 }
 
-/* ===== Base para conservar el ancho y la caja ===== */
-*,
-*::before,
-*::after { box-sizing: border-box; }
-
 html, body {
   margin: 0;
   padding: 0;
-}
-
-.page-1280 {
-  position: relative;
-  width: 1280px;         /* Ancho fijo para respetar las coordenadas */
-  margin: 0 auto;
-  background: #f8f0dc;   /* Fondo crema similar a la maqueta (ajústalo si quieres) */
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* ====   Footer   ====*/
@@ -206,7 +192,7 @@ html, body {
 }
 
 .footer-img {
-  margin-left: 80px;
+  margin-left: 60px;
   position: absolute;
   height: 53px;
   width: 53px;
@@ -231,7 +217,10 @@ html, body {
 }      
 .footer-img-6 { 
   left: 1046px; 
-}                  
+}
+.footer-img-7 { 
+  left: 1202px; 
+}                   
 
 .footer-mapa {
   margin-left: 100px;
