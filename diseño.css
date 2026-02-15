@@ -1,7 +1,29 @@
+/* movil */
+@media (min-width: 600px) {
+body{
+  flex-direction: column;
+  transition: all 0.5s ease;
+  gap:15px;
+  font-size: x-small;
+}
+.inicio img {
+  width: 40%;
+  display: block;
+  margin: 40px auto;
+  border-radius: 40px;
+}
+.bloque {
+  padding: 30px 60px;
+  text-align: center;
+}
+
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #edc6c6;
+
 }
 
 /* Barra superior */
