@@ -38,7 +38,7 @@ body {
 /* Menú */
 .menu {
   background: #e6e6e6;
-  padding: 5px 30px;
+  padding: 5px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,6 +131,12 @@ body {
   background: white;
   border-radius: 30px;
   padding-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+.cuadro:hover {
+  transform: scale(1.1);
+
 }
 
 .cuadro img {
@@ -189,7 +195,7 @@ html, body {
 .footer {
   position: relative;
   width: 100%;
-  height: 260px; 
+  height: 220px; 
   margin-top: 40px;
 }
 
@@ -220,14 +226,13 @@ html, body {
   height: 53px;
   width: 53px;
   object-fit:contain;
-  top: 95px;
+  top: 110px;
 }
 .footer-img-1 { 
   left: 196px; width: 71px; 
-}      /* image9 */
+}   
 .footer-img-2 {
   left: 379px; width: 75.761px; height: 52.669px; /* image5 */
- 
 }
 .footer-img-3 { 
   left: 563px; 
