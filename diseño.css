@@ -197,11 +197,12 @@ html, body {
   width: 100%;
   height: 220px; 
   margin-top: 40px;
+  align-items: center;
 }
 
 .footer-title {
   position: absolute;
-  top: 200px;     
+  top: 180px;     
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -215,13 +216,12 @@ html, body {
   top: 80px;    
   left: 5px;
   right: 11px;   
-  height: 180px;
-  background: #e6e6e6;
+  height: 170px;
+  background: #f7f7d29f;
   border-radius: 2px;
 }
 
 .footer-img {
-  margin-left: 60px;
   position: absolute;
   height: 53px;
   width: 53px;
@@ -229,24 +229,24 @@ html, body {
   top: 110px;
 }
 .footer-img-1 { 
-  left: 196px; width: 71px; 
+  left: 20%; width: 71px; 
 }   
 .footer-img-2 {
-  left: 379px; width: 75.761px; height: 52.669px; /* image5 */
+  left: 30%; width: 75.761px; height: 52.669px;
 }
 .footer-img-3 { 
-  left: 563px; 
+  left: 40%; 
 }                 
 .footer-img-4 { 
-  left: 719px; 
+  left: 50%; 
 }                  
 .footer-img-5 { 
-  left: 877px; width: 45px; 
+  left: 60%; width: 45px; 
 }      
 .footer-img-6 { 
-  left: 1046px; 
+  left: 70%; 
 }
 .footer-img-7 { 
-  left: 1202px; 
+  left: 80%; 
 }                   
 
