@@ -1,39 +1,43 @@
 /* movil */
-@media (min-width: 600px) {
+@media (max-width: 900px) {
   body {
     flex-direction: column;
     transition: all 0.5s ease;
-    gap: 15px;
+    gap: 15%;
     font-size: x-small;
     overflow-x: hidden;
+    max-height: 50%!im;
   }
 
   .menu {
     flex-direction: column; 
     align-items: center!important;
-    padding: 20px 10px;
-    width: 100%;
-    height: auto !important
+    padding: 10px -10px!important;
+    width: 100%!important;
+    height: 120px !important;
+     max-height: 10%;
   }
 
   .menu .logo {
-    width: 150px!important;
-    margin: 0!important;
-    
+    width: 120px!important;
+    margin: 10px!important;
+
   }
 
   .menu ul {
-    flex-direction: column!important;
-    margin-right: 0!important;
-    padding: 2!important;
-    margin: 0px!important;
+    flex-direction:row!important;
+    padding: 2px!important;
+    margin-top: -10%!important;
+    gap:6%;
     text-align: center!important;
+   align-items: center;
   }
 
   .menu p {
     margin: 10px 0!important;
     text-align: center!important;
-    font-size: 18px!important;
+    font-size: 18%!important;
+    gap: 2%;
   }
   .inicio img {
     width: 20%;
@@ -84,10 +88,10 @@
 
   .footer-img {
     position: relative;
-    display: inline-block!important;
-    left: auto;
-    margin: 0px;
+    margin-right: 50%!important;
     top: 20px;
+    max-height: 12%;
+    gap: 30%!important;
   }
 
   .footer-title {
@@ -102,6 +106,7 @@ body {
   font-family: Arial, sans-serif;
   background: #edc6c6;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Barra superior */
@@ -116,31 +121,35 @@ body {
 
 /* Menú */
 .menu {
-  background: #e6e6e6;
-  padding: 5px 15px;
+  background: #e6e6e6;  
+  padding: -20% 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 80px;
 }
 
 .menu .logo {
+  margin-left: 2%;
   width: 200px;
-  margin-top: -10px;
+  margin-top: -25px;
 }
 
 .menu ul {
   display: flex;
   list-style: none;
-  gap: 30px;
-  margin-right: 50px;
+  gap: auto;
+  margin-right: 90px;
+  margin-top: 30px;
+
 }
 
 .menu p{
   font-size: 20px;
-  margin: 20px;
+  margin: 10px;
   margin-left: 10px;
-  margin-right: 130px;
+  margin-right: 170px;
 }
 
 /* Foto inicio */
@@ -297,10 +306,9 @@ html, body {
 .footer-fondo {
   position: absolute;
   top: 80px;    
-  left: 5px;
-  right: 11px;   
   height: 170px;
   background: #f7f7d29f;
+  width: 100%;
   border-radius: 2px;
 }
 
