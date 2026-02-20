@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #edc6c6;
-
+  width: 100%;
 }
 
 /* Barra superior */
@@ -33,6 +33,7 @@ body {
   text-align: center;
   padding: 0.1px 5px;
   font-size: 15px;
+  width: 100%;
 }
 
 /* Menú */
@@ -42,6 +43,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .menu .logo {
@@ -53,7 +55,7 @@ body {
   display: flex;
   list-style: none;
   gap: 30px;
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .menu p{
