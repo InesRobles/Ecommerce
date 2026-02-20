@@ -1,22 +1,100 @@
 /* movil */
 @media (min-width: 600px) {
-body{
-  flex-direction: column;
-  transition: all 0.5s ease;
-  gap:15px;
-  font-size: x-small;
-}
-.inicio img {
-  width: 40%;
-  display: block;
-  margin: 40px auto;
-  border-radius: 40px;
-}
-.bloque {
-  padding: 30px 60px;
-  text-align: center;
-}
+  body {
+    flex-direction: column;
+    transition: all 0.5s ease;
+    gap: 15px;
+    font-size: x-small;
+    overflow-x: hidden;
+  }
 
+  .menu {
+    flex-direction: column; 
+    align-items: center!important;
+    padding: 20px 10px;
+    width: 100%;
+    height: auto !important
+  }
+
+  .menu .logo {
+    width: 150px!important;
+    margin: 0!important;
+    
+  }
+
+  .menu ul {
+    flex-direction: column!important;
+    margin-right: 0!important;
+    padding: 2!important;
+    margin: 0px!important;
+    text-align: center!important;
+  }
+
+  .menu p {
+    margin: 10px 0!important;
+    text-align: center!important;
+    font-size: 18px!important;
+  }
+  .inicio img {
+    width: 20%;
+    margin: 20px auto;
+    border-radius: 20px;
+  }
+
+  .bloque {
+    padding: 30px 20px; 
+    text-align: center;
+  }
+
+  .bloque h2, .opiniones h2 {
+    font-size: 30px;
+  }
+
+  .selector {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 80%;
+  }
+  .productos, .opiniones-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cuadro, .opinion {
+    width: 90%; 
+    max-width: 300px;
+  }
+
+  .footer {
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .footer-fondo {
+    position: relative;
+    top: 0;
+    height: 250px;
+  }
+
+  .footer-img {
+    position: relative;
+    display: inline-block!important;
+    left: auto;
+    margin: 0px;
+    top: 20px;
+  }
+
+  .footer-title {
+    position: relative;
+    top: 40px;
+    font-size: 20px;
+  }
 }
 
 body {
