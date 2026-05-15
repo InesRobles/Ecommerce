@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Falo Master</title>
   <link rel="stylesheet" href="diseño.css">
+  <script src="java.js"></script>
 </head>
 
 <body>
@@ -14,21 +15,45 @@
   </header>
 
   <grid class="menu">
-    <img src="/Trabajo Web/logo.jpeg" alt="logo" class="logo">
+    <img src="Trabajo_Web/logo.jpeg" alt="logo" class="logo">
     <ul>
       <p>Top ventas</p>
       <p>BDSM</p>
       <p>Kits</p>
       <p>Lubricantes</p>
       <p>Salud íntima</p>
-      <img src="/Trabajo Web/carrito2.png" class="carrito" style="margin-right: 10px;">
-      <img src="/Trabajo Web/Usuario.png" class="perfil" style="margin-right: 10px;">
+      <grid class="menu">
+    <img src="Trabajo_Web/carrito2.png" class="carrito">
+    <span id="contador-carrito">0</span>
+      <button id="btn-sesion" onclick="abrirModalSesion()"
+    style="background:none;border:none;color:inherit;cursor:pointer;font-size:16px;">
+    Acceder
+</button>
     </ul>
   </grid>
 
   <section class="inicio">
-    <img src="/Trabajo Web/FotoInicio.png" alt="banner principal">
+    <img src="Trabajo_Web/FotoInicio.png" alt="banner principal">
   </section>
+
+  <section class="bloque">
+    <div style="text-align: center; margin: 20px;">
+        <h3>Añadir producto personalizado</h3>
+        <input type="text" id="input-nombre" placeholder="Nombre del producto" style="padding: 10px;">
+        <input type="number" id="input-precio" placeholder="Precio (€)" style="padding: 10px; width: 100px;">
+        
+        <button class="btn rosa" onclick="agregarDesdeInput()">Agregar al Carrito</button>
+    </div>
+</section>
+
+<section class="bloque">
+  <h2>MI CARRITO</h2>
+  <ul id="lista-carrito"></ul>
+<p>Subtotal: <span id="total-precio">0</span>€</p>
+<p>Envío:    <span id="coste-envio">—</span></p>
+<p><strong>Total final: <span id="total-con-envio">0</span>€</strong></p>
+  <button class="btn" onclick="vaciarCarrito()" style="background-color: bisque;color: black;">Vaciar Carrito</button>
+</section>
 
   <!-- ==== TOP VENTAS ==== -->
   <section class="bloque">
@@ -37,31 +62,33 @@
     <div class="productos">
       <div style="align-items: center;">
         <button class="btn rosa">🎕 Para Ella 🎕</button>
-        <div class="cuadro">
-        <img src="/Trabajo Web/FotoElla.png">
-        <h3>Gogo</h3>
-        <p>Vibrador conejito con simulación de sexo oral.</p>
-        <p>79.99€</p>
-      </div>
-      </div>
+         <div class="cuadro">
+    <img src="Trabajo_Web/FotoElla.png">
+    <h3 class="prod-nombre">Gogo</h3>
+    <p>Vibrador conejito</p>
+    <p><span class="prod-precio">79.99</span>€</p>
+    <button class="btn-add" onclick="agregarCarrito('Gogo', 79.99)">Añadir al carrito</button>
+</div>
       
-      
+    
 <div style="align-items: center;">
   <button class="btn azul">∞ Para ambos ∞</button>
       <div class="cuadro">
-        <img src="/Trabajo Web/FotoAmbos.png">
-        <h3>Craby</h3>
+        <img src="Trabajo_Web/FotoAmbos.png">
+        <h3 class="prod-nombre">Craby</h3>
         <p>El vibrador de parejas más versatil e inclusivo.</p>
-        <p>64.99€</p>
+        <p><span class="prod-precio">64.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Craby', 64.99)">Añadir al carrito</button>
       </div>
       </div>
 <div style="align-items: center;">
    <button class="btn verde">༯ Para Él ༯</button>
       <div class="cuadro">
-        <img src="/Trabajo Web/FotoEl.png">
-        <h3>Lumbra</h3>
+        <img src="Trabajo_Web/FotoEl.png">
+        <h3 class="prod-nombre">Lumbra</h3>
         <p>Un masturbador para pene con efecto calor.</p>
-        <p>44.99€</p>
+        <p><span class="prod-precio">44.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Lumbra', 44.99)">Añadir al carrito</button>
       </div>
       </div>
     </div>
@@ -73,24 +100,27 @@
 
     <div class="productos">
       <div class="cuadro">
-        <img src="/Trabajo Web/LubriFresa.png">
-        <h3>Lubricante de Fresa</h3>
+        <img src="Trabajo_Web/LubriFresa.png">
+        <h3 class="prod-nombre">Lubricante de Fresa</h3>
         <p>Lubricante agua</p>
-        <p>8.99€</p>
+        <p><span class="prod-precio">8.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Lubricante de Fresa', 8.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/Estimulante.png">
-        <h3>Estimulante vibrador líquido monodosis</h3>
+        <img src="Trabajo_Web/Estimulante.png">
+        <h3 class="prod-nombre">Estimulante vibrador líquido monodosis</h3>
         <p>Estimulante</p>
-        <p>4.99€</p>
+        <p><span class="prod-precio">4.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Estimulante vibrador líquido monodosis', 4.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/lubricannabis.png">
-        <h3>Lubricante de cannabis</h3>
+        <img src="Trabajo_Web/lubricannabis.png">
+        <h3 class="prod-nombre">Lubricante de cannabis</h3>
         <p>Lubricante agua</p>
-        <p>14.99€</p>
+        <p><span class="prod-precio">14.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Lubricante de cannabis', 14.99)">Añadir al carrito</button>
       </div>
     </div>
   </section>
@@ -101,21 +131,24 @@
 
     <div class="productos">
       <div class="cuadro">
-        <img src="/Trabajo Web/kit1.png">
-        <h3>Tía, prueba esto</h3>
-        <p>82.99€</p>
+        <img src="Trabajo_Web/kit1.png">
+        <h3 class="prod-nombre">Tía, prueba esto</h3>
+        <p><span class="prod-precio">82.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Tía, prueba esto', 82.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/kit2.png">
-        <h3>Ya era hora</h3>
-        <p>102.99€</p>
+        <img src="Trabajo_Web/kit2.png">
+        <h3 class="prod-nombre">Ya era hora</h3>
+        <p><span class="prod-precio">102.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Ya era hora', 102.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/kit3.png">
-        <h3>Ya me darás las gracias</h3>
-        <p>67.99€</p>
+        <img src="Trabajo_Web/kit3.png">
+        <h3 class="prod-nombre">Ya me darás las gracias</h3>
+        <p><span class="prod-precio">67.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Ya me darás las gracias', 67.99)">Añadir al carrito</button>
       </div>
     </div>
   </section>
@@ -126,24 +159,27 @@
 
     <div class="productos">
       <div class="cuadro">
-        <img src="/Trabajo Web/Copa.png">
-        <h3>Copa menstrual Greta</h3>
+        <img src="Trabajo_Web/Copa.png">
+        <h3 class="prod-nombre">Copa menstrual Greta</h3>
         <p>Higiene menstrual</p>
-        <p>24.99€</p>
+        <p><span class="prod-precio">24.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Copa menstrual Greta', 24.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/Dilatador.png">
-        <h3>Cris</h3>
+        <img src="Trabajo_Web/Dilatador.png">
+        <h3 class="prod-nombre">Cris</h3>
         <p>Dilatador vaginal</p>
-        <p>44.99€</p>
+        <p><span class="prod-precio">44.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Dilatador vaginal', 44.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/Durex.png">
-        <h3>Preservativos Real Feel</h3>
+        <img src="Trabajo_Web/Durex.png">
+        <h3 class="prod-nombre">Preservativos Real Feel</h3>
         <p>Preservativos</p>
-         <p>14.99€</p>
+         <p><span class="prod-precio">14.99€</span></p>
+         <button class="btn-add" onclick="agregarCarrito('Preservativos Real Feel', 14.99)">Añadir al carrito</button>
       </div>
     </div>
   </section>
@@ -154,24 +190,28 @@
 
     <div class="productos">
       <div class="cuadro">
-        <img src="/Trabajo Web/Esposas.png">
-        <h3>Esposas peluche Ted</h3>
-        <p>26.99€</p>
+        <img src="Trabajo_Web/Esposas.png">
+        <h3 class="prod-nombre">Esposas peluche Ted</h3>
+        <p><span class="prod-precio">26.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Esposas peluche Ted', 26.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/Pezones.png">
-        <h3>Pinzas pezones Iki</h3>
-        <p>19.99€</p>
+        <img src="Trabajo_Web/Pezones.png">
+        <h3 class="prod-nombre">Pinzas pezones Iki</h3>
+        <p><span class="prod-precio">19.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('Pinzas pezones Iki', 19.99)">Añadir al carrito</button>
       </div>
 
       <div class="cuadro">
-        <img src="/Trabajo Web/Bdsm2.png">
-        <h3>SAO</h3>
-        <p>49.99€</p>
+        <img src="Trabajo_Web/Bdsm2.png">
+        <h3 class="prod-nombre">SAO</h3>
+        <p><span class="prod-precio">49.99€</span></p>
+        <button class="btn-add" onclick="agregarCarrito('SAO', 49.99)">Añadir al carrito</button>
       </div>
     </div>
   </section>
+ 
 
   <!-- ==== OPINIONES ==== -->
   <section class="opiniones">
@@ -180,19 +220,19 @@
     <div class="opiniones-grid">
 
       <div class="opinion">
-        <img src="/Trabajo Web/Usuario.png" class="perfil">
+        <img src="Trabajo_Web/Usuario.png" class="perfil">
         <h3>Alba</h3>
         <p>"opinion"</p>
       </div>
 
       <div class="opinion">
-        <img src="/Trabajo Web/Usuario.png" class="perfil">
+        <img src="Trabajo_Web/Usuario.png" class="perfil">
         <h3>Inés</h3>
         <p>"opinion"</p>
       </div>
 
       <div class="opinion">
-        <img src="/Trabajo Web/Usuario.png" class="perfil">
+        <img src="Trabajo_Web/Usuario.png" class="perfil">
         <h3>Usuario: </h3>
         <input style="background-color:rgba(234, 94, 129, 0.39) ;">
         <p>Opinión:</p>
@@ -205,12 +245,12 @@
   <footer class="footer">
     <div class="footer-fondo"></div>
      <div style="align-items: center;"></div>
-    <img class="footer-img footer-img-1" src="/Trabajo Web/gmail.png"  alt="">
-    <img class="footer-img footer-img-2" src="/Trabajo Web/telegram.png"  alt="">
-    <img class="footer-img footer-img-3" src="/Trabajo Web/tiktok.png" alt="">
-    <img class="footer-img footer-img-4" src="/Trabajo Web/whatsapp.png" alt="">
-    <img class="footer-img footer-img-5" src="/Trabajo Web/x.png" alt="">
-    <img class="footer-img footer-img-6" src="/Trabajo Web/instagram.png" alt="">
+    <img class="footer-img footer-img-1" src="Trabajo_Web/gmail.png"  alt="">
+    <img class="footer-img footer-img-2" src="Trabajo_Web/telegram.png"  alt="">
+    <img class="footer-img footer-img-3" src="Trabajo_Web/tiktok.png" alt="">
+    <img class="footer-img footer-img-4" src="Trabajo_Web/whatsapp.png" alt="">
+    <img class="footer-img footer-img-5" src="Trabajo_Web/x.png" alt="">
+    <img class="footer-img footer-img-6" src="Trabajo_Web/instagram.png" alt="">
    <a href="https://www.google.com/maps/place/Atr%C3%A9vete+SexShop+-+Sevilla+Este/@37.401739,-5.920882,3a,75y,159.78h,93.03t/data=!3m7!1e1!3m5!1skhONkAL0PeHpS5PeguBFUA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-3.031656197520846%26panoid%3DkhONkAL0PeHpS5PeguBFUA%26yaw%3D159.78487681413384!7i16384!8i8192!4m6!3m5!1s0xd126f359506ad3d:0x9b6b9486eaa32db4!8m2!3d37.4015964!4d-5.920826!16s%2Fg%2F1tgx7wcr?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D"> <img class="footer-img footer-img-7" src="/Trabajo Web/google.png" alt=""></a>
    </div>
       <h3 class="footer-title">¡CONTACTA CON NOSOTROS!</h3>
